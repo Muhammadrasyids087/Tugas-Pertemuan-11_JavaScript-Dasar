@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Luas Lingkaran</title>
+
+  <script>
+    function hitungLuas() {
+      var radius = document.getElementById('radiusInput').value;
+
+      var luas = Math.PI * radius * radius;
+      
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = `Luas lingkaran dengan jari-jari ${radius} adalah: ${luas.toFixed(2)}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Kalkulator Luas Lingkaran</h2>
+  <label for="radiusInput">Masukkan jari-jari lingkaran:</label>
+  <input type="number" id="radiusInput">
+  <button onclick="hitungLuas()">Hitung Luas</button>
+  <p id="result"></p>
+
+  
+</body>
+</html>
